@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoEscola_API.Data;
 using ProjetoEscola_API.Models;
+
 namespace ProjetoEscola_API.Controllers
 {
     [Route("api/[controller]")]
@@ -19,10 +20,10 @@ namespace ProjetoEscola_API.Controllers
         }
 
         [HttpGet]
-public ActionResult<List<Aluno>> GetAll()
-{
-return _context.Aluno.ToList();
-}
+        public ActionResult<List<Aluno>> GetAll()
+        {
+            return _context.Aluno.ToList();
+        }
 
         [HttpPost]
         public async Task<ActionResult> post(Aluno model)
